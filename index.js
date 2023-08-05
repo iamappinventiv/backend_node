@@ -5,10 +5,11 @@ const mongoose = require('mongoose');
 const mongoString = process.env.DATABASE_URL;
 const routes = require('./routes/route');
 
-mongoose.connect(mongoString);
+// mongoose.connect(mongoString);
+
 const database = mongoose.connection;
 
-database.on('error', (error) => {
+database.on('error====>', (error) => {
     console.log(error)
 })
 
